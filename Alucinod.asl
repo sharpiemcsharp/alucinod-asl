@@ -24,7 +24,10 @@ update
 	if (current.CheckPointId == 19 && old.CheckPointId == 0)
 	{
 		vars.LoadTime = current.InGameTimer;
-		print("LOADTIME: " + TimeSpan.FromSeconds(vars.LoadTime).ToString());
+		if (settings["Debug"])
+		{
+			print("LOADTIME: " + TimeSpan.FromSeconds(vars.LoadTime).ToString());
+		}
 	}
 }
 
